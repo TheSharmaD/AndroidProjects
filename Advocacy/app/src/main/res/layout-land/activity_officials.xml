@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfficialsActivity">
+    <TextView
+        android:id="@+id/topbar_official"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/medium_purple"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/name_official1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Diksha Sharma"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar_official" />
+    <TextView
+        android:id="@+id/position_official"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="President"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_official1" />
+    <TextView
+        android:id="@+id/party_official"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="(Democratic Party)"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/position_official" />
+    <LinearLayout
+        android:id="@+id/linearLayout_official"
+        android:layout_width="match_parent"
+        android:layout_height="301dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/address_official"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:onClick="onClickAddress"
+            android:text="Address: Chicago, IL"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_official" />
+        <TextView
+            android:id="@+id/contact_official"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:text="Phone: (312) - 000 - 0911"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/address_official"
+            app:layout_constraintTop_toBottomOf="@+id/address_official" />
+        <TextView
+            android:id="@+id/email_official"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:text="Email: email@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/address_official"
+            app:layout_constraintTop_toBottomOf="@+id/address_official" />
+        <TextView
+            android:id="@+id/website_official"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:text="Website: www.iit.com"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/contact_official"
+            app:layout_constraintTop_toBottomOf="@+id/contact_official" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/photo_official"
+        android:layout_width="159dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="16dp"
+        android:foregroundGravity="center"
+        android:onClick="onClick_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/topbar_official"
+        app:srcCompat="@drawable/placeholder" />
+    <ImageView
+        android:id="@+id/logo1_official"
+        android:layout_width="76dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="-36dp"
+        android:elevation="20dp"
+        android:onClick="onClickParty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/photo_official" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+    <Button
+        android:id="@+id/facebookbtn_official"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/facebook"
+        android:foreground="@drawable/facebook"
+        android:onClick="OnClickFB"
+        app:layout_constraintEnd_toStartOf="@+id/twitterbtn_official"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/party_official" />
+
+    <Button
+        android:id="@+id/youtubebtn_official"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/youtube"
+        android:foreground="@drawable/youtube"
+        android:onClick="onClickUTube"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/twitterbtn_official"
+        app:layout_constraintTop_toBottomOf="@+id/party_official" />
+
+    <Button
+        android:id="@+id/twitterbtn_official"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/twitter"
+        android:foreground="@drawable/twitter"
+        android:onClick="onClickTwit"
+        app:layout_constraintEnd_toStartOf="@+id/youtubebtn_official"
+        app:layout_constraintStart_toEndOf="@+id/facebookbtn_official"
+        app:layout_constraintTop_toBottomOf="@+id/party_official" />
+</androidx.constraintlayout.widget.ConstraintLayout>

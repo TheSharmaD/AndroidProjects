@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_entry"
+        android:layout_width="288dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="Official Title"
+        android:textColor="@color/medium_purple"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/photo_entry"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/name_entry"
+        android:layout_width="288dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="Official Name"
+        android:textColor="@color/medium_purple"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/photo_entry"
+        app:layout_constraintTop_toBottomOf="@+id/title_entry"
+        tools:ignore="TextContrastCheck" />
+    <ImageView
+        android:id="@+id/separator_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_entry"
+        app:srcCompat="@drawable/separator" />
+    <ImageView
+        android:id="@+id/photo_entry"
+        android:layout_width="89dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+</androidx.constraintlayout.widget.ConstraintLayout>

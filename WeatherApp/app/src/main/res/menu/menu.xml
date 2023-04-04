@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/converter"
+        android:icon="@drawable/units_f"
+        android:title="Degree"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/days"
+        android:icon="@drawable/daily"
+        android:title="15 Day Activity"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/location"
+        android:title="Change Location"
+        app:showAsAction="always" />
+</menu>
